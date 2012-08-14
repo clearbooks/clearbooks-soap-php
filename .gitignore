@@ -1,0 +1,10 @@
+# IDE
+nbproject/
+.idea/
+.settings/
+.project
+
+# General
+.DS_Store/
+*~
+*.swp
