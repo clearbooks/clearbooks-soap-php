@@ -14,15 +14,15 @@ class Clearbooks_Soap_1_0_AccountCodeRequest
     public $name;
 
     /** @var string */
-    public $default_vat_rate;
+    public $default_vat_rate = '';
 
     /** @var int */
-    public $show_sales;
+    public $show_sales = 0;
 
     /** @var int */
-    public $show_purchases;
+    public $show_purchases = 0;
 
     /** @var int */
-    public $show_budget;
+    public $show_budget = 0;
 }
 //EOF AccountCodeRequest.php

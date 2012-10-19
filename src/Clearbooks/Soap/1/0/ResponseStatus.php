@@ -11,6 +11,6 @@ class Clearbooks_Soap_1_0_ResponseStatus
     public $success;
 
     /** @var string */
-    public $msg;
+    public $msg = 'Test';
 }
 //EOF ResponseStatus.php

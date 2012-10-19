@@ -5,12 +5,12 @@
  * @package Clearbooks
  * @subpackage Soap/1/0
  */
-class Clearbooks_Soap_1_0_CreditResponseStatus
+class Clearbooks_Soap_1_0_PaymentInvoice
 {
     /** @var int */
     public $id;
 
-    /** @var string */
-    public $msg;
+    /** @var float */
+    public $amount = 0;
 }
-//EOF CreditResponseStatus.php
+//EOF PaymentInvoice.php

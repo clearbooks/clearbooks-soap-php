@@ -17,54 +17,54 @@ class Clearbooks_Soap_1_0_Invoice
     public $entityId;
 
     /** @var int */
-    public $invoice_id;
+    public $invoice_id = 0;
 
     /** @var string */
-    public $invoice_prefix;
+    public $invoice_prefix = '';
 
     /** @var int */
-    public $invoiceNumber;
+    public $invoiceNumber = 0;
 
     /** @var string */
-    public $reference;
+    public $reference = '';
 
     /** @var \DateTime */
     public $dateCreated;
 
     /** @var \DateTime */
-    public $dateDue;
+    public $dateDue = '';
 
     /** @var \DateTime */
-    public $dateAccrual;
+    public $dateAccrual = '';
 
     /** @var int */
-    public $creditTerms;
+    public $creditTerms = 0;
 
     /** @var int */
-    public $bankPaymentId;
+    public $bankPaymentId = 0;
 
     /** @var int */
-    public $project;
+    public $project = 0;
 
     /** @var string */
-    public $external_id;
+    public $external_id = '';
 
     /** @var string */
-    public $status;
+    public $status = '';
 
     /** @var string */
-    public $statementPage;
+    public $statementPage = '';
 
     /** @var int */
-    public $themeId;
+    public $themeId = 1;
 
     /** @var string */
     public $type;
 
     /** @var string */
-    public $vatTreatment;
+    public $vatTreatment = '';
 
     /** @var int */
-    public $multicurrency;
+    public $multicurrency = '';
 }
 //EOF Invoice.php

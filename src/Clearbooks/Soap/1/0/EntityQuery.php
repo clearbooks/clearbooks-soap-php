@@ -11,15 +11,15 @@ class Clearbooks_Soap_1_0_EntityQuery
     public $id = array();
 
     /** @var string */
-    public $companyName;
+    public $companyName = '';
 
     /** @var string */
-    public $type;
+    public $type = '';
 
     /** @var int */
-    public $offset;
+    public $offset = 0;
 
     /** @var \DateTime */
-    public $modifiedSince;
+    public $modifiedSince = '';
 }
 //EOF EntityQuery.php

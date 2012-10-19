@@ -8,21 +8,21 @@
 class Clearbooks_Soap_1_0_InvoiceQuery
 {
     /** @var int[] */
-    protected $id = array();
+    public $id = array();
 
     /** @var int[] */
-    protected $entityId = array();
+    public $entityId = array();
 
     /** @var string */
-    protected $ledger;
+    public $ledger;
 
     /** @var string */
-    protected $status;
+    public $status = '';
 
     /** @var int */
-    protected $offset;
+    public $offset = 0;
 
     /** @var \DateTime */
-    protected $modifiedSince;
+    public $modifiedSince = '';
 }
 //EOF InvoiceQuery.php

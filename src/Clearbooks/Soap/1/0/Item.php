@@ -14,15 +14,15 @@ class Clearbooks_Soap_1_0_Item
     public $unitPrice;
 
     /** @var float */
-    public $vat;
+    public $vat = '';
 
     /** @var int */
-    public $quantity;
+    public $quantity = 1;
 
     /** @var int */
     public $type;
 
     /** @var string */
-    public $vatRate;
+    public $vatRate = '0';
 }
 //EOF Item.php

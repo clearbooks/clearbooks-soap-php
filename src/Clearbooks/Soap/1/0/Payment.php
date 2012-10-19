@@ -31,10 +31,10 @@ class Clearbooks_Soap_1_0_Payment
     /** @var int */
     public $paymentMethod;
 
-    /** @var int */
+    /** @var string */
     public $bankAccount;
 
     /** @var int */
-    public $bsAccount;
+    public $bsAccount = 0;
 }
 //EOF Payment.php

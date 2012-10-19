@@ -8,12 +8,12 @@
 class Clearbooks_Soap_1_0_EntityExtra
 {
     /** @var int */
-    public $default_account_code;
+    public $default_account_code = '0';
 
-    /** @var float */
-    public $default_vat_rate;
+    /** @var string */
+    public $default_vat_rate = '0.00:Out';
 
     /** @var int */
-    public $default_credit_terms;
+    public $default_credit_terms = 30;
 }
 //EOF EntityExtra.php

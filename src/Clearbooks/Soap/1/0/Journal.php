@@ -17,9 +17,9 @@ class Clearbooks_Soap_1_0_Journal
     public $accountingDate;
 
     /** @var int */
-    public $project;
+    public $project = 0;
 
     /** @var int */
-    public $entity;
+    public $entity = 0;
 }
 //EOF Journal.php

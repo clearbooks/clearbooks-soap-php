@@ -20,6 +20,7 @@ class Clearbooks_Soap_1_0 extends \SoapClient
         'Currency'                      => 'Clearbooks_Soap_1_0_Currency',
         'Entity'                        => 'Clearbooks_Soap_1_0_Entity',
         'EntityExtra'                   => 'Clearbooks_Soap_1_0_EntityExtra',
+        'EntityOutstandingBalance'      => 'Clearbooks_Soap_1_0_EntityOutstandingBalance',
         'EntityQuery'                   => 'Clearbooks_Soap_1_0_EntityQuery',
         'Invoice'                       => 'Clearbooks_Soap_1_0_Invoice',
         'InvoiceQuery'                  => 'Clearbooks_Soap_1_0_InvoiceQuery',
@@ -30,8 +31,7 @@ class Clearbooks_Soap_1_0 extends \SoapClient
         'JournalLedgerItem'             => 'Clearbooks_Soap_1_0_JournalLedgerItem',
         'JournalReturn'                 => 'Clearbooks_Soap_1_0_JournalReturn',
         'ListBankAccountsReturn'        => 'Clearbooks_Soap_1_0_ListBankAccountsReturn',
-        'listOutstandingBalancesReturn' => 'Clearbooks_Soap_1_0_ListOutstandingBalancesReturn',
-        'ListThemesReturn'              => 'Clearbooks_Soap_1_0_ListThemesReturn',
+        'ListOutstandingBalancesReturn' => 'Clearbooks_Soap_1_0_ListOutstandingBalancesReturn',
         'Payment'                       => 'Clearbooks_Soap_1_0_Payment',
         'PaymentInvoice'                => 'Clearbooks_Soap_1_0_PaymentInvoice',
         'PaymentReturn'                 => 'Clearbooks_Soap_1_0_PaymentReturn',
@@ -53,7 +53,7 @@ class Clearbooks_Soap_1_0 extends \SoapClient
         $this->apiKey = $apiKey;
 
         if ( !$wsdl ) {
-            $wsdl = 'https://secure.clearbooks.co.uk/api/wsdl/';
+            $wsdl = 'https://secure.clearbooks.co.uk/api/accounting/wsdl/';
         }
 
         if ( !is_array( $options ) ) {
@@ -70,7 +70,7 @@ class Clearbooks_Soap_1_0 extends \SoapClient
             }
         }
 
-        parent::SoapClient( $wsdl, $options );
+        parent::__construct( $wsdl, $options );
 
         $this->namespace = str_replace( 'wsdl', 'soap', $wsdl );
 
@@ -187,6 +187,16 @@ class Clearbooks_Soap_1_0 extends \SoapClient
     }
 
     /**
+     * @param int $entityId
+     * @param string $type
+     * @return \Clearbooks_Soap_1_0_EntityOutstandingBalance
+     */
+    public function getEntityOutstandingBalance( $entityId, $type )
+    {
+        return $this->_call( 'getEntityOutstandingBalance', $entityId, $type );
+    }
+
+    /**
      * @param string $type
      * @param string $invoicePrefix
      * @param string $invoiceNumber
@@ -231,7 +241,7 @@ class Clearbooks_Soap_1_0 extends \SoapClient
     }
 
     /**
-     * @return \Clearbooks_Soap_1_0_Currency
+     * @return \Clearbooks_Soap_1_0_Currency[]
      */
     public function listCurrencies()
     {
@@ -251,7 +261,7 @@ class Clearbooks_Soap_1_0 extends \SoapClient
      * @param \Clearbooks_Soap_1_0_InvoiceQuery $query
      * @return \Clearbooks_Soap_1_0_Invoice[]
      */
-    public function listInvoices( \Clearbooks_Soap_1_0_InvoiceQuery $query = null )
+    public function listInvoices( \Clearbooks_Soap_1_0_InvoiceQuery $query )
     {
         return $this->_call( 'listInvoices', $query );
     }
@@ -259,7 +269,7 @@ class Clearbooks_Soap_1_0 extends \SoapClient
     /**
      * @param string $type
      * @param int $limit
-     * @return \Clearbooks_Soap_1_0_ListOutstandingBalancesReturn
+     * @return \Clearbooks_Soap_1_0_ListOutstandingBalancesReturn[]
      */
     public function listOutstandingBalances( $type, $limit = 10 )
     {
@@ -276,7 +286,7 @@ class Clearbooks_Soap_1_0 extends \SoapClient
     }
 
     /**
-     * @return \Clearbooks_Soap_1_0_ListThemesReturn
+     * @return \Clearbooks_Soap_1_0_Theme[]
      */
     public function listThemes()
     {

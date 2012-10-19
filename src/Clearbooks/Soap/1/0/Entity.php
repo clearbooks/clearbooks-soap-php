@@ -17,7 +17,7 @@ class Clearbooks_Soap_1_0_Entity
     public $bankAccount;
 
     /** @var int */
-    public $id;
+    public $id = 0;
 
     /** @var string */
     public $company_name;
@@ -35,7 +35,7 @@ class Clearbooks_Soap_1_0_Entity
     public $county;
 
     /** @var string */
-    public $country;
+    public $country = 'GB';
 
     /** @var string */
     public $postcode;
@@ -47,33 +47,33 @@ class Clearbooks_Soap_1_0_Entity
     public $phone1;
 
     /** @var string */
-    public $building;
+    public $building = '';
 
     /** @var string */
-    public $address2;
+    public $address2 = '';
 
     /** @var string */
-    public $phone2;
+    public $phone2 = '';
 
     /** @var string */
-    public $fax;
+    public $fax = '';
 
     /** @var string */
-    public $website;
+    public $website = '';
 
     /** @var \DateTime */
-    public $date_modified;
+    public $date_modified = '';
 
     /** @var string */
-    public $external_id;
+    public $external_id = '';
 
     /** @var string */
-    public $vat_number;
+    public $vat_number = '';
 
     /** @var string */
-    public $company_number;
+    public $company_number = '';
 
     /** @var string */
-    public $statement_url;
+    public $statement_url = '';
 }
 //EOF Entity.php

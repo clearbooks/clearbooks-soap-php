@@ -14,9 +14,9 @@ class Clearbooks_Soap_1_0_Project
     public $status;
 
     /** @var string */
-    public $description;
+    public $description = '';
 
     /** @var int */
-    public $id;
+    public $id = 0;
 }
 //EOF Project.php

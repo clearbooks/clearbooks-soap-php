@@ -5,12 +5,12 @@
  * @package Clearbooks
  * @subpackage Soap/1/0
  */
-class Clearbooks_Soap_1_0_PaymentInvoice
+class Clearbooks_Soap_1_0_ListOutstandingBalancesReturn
 {
     /** @var int */
-    public $id;
+    public $entity;
 
     /** @var float */
-    public $amount;
+    public $balance;
 }
-//EOF PaymentInvoice.php
+//EOF ListOutstandingBalancesReturn.php
