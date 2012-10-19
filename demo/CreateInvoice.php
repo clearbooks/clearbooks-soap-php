@@ -22,3 +22,13 @@ $invoice->items[]  = $item;
 
 $invoiceReturn = $client->createInvoice( $invoice );
 print_r( $invoiceReturn );
+
+/*
+Clearbooks_Soap_1_0_InvoiceReturn Object
+(
+    [due] => 29.99
+    [invoice_id] => 211
+    [invoice_prefix] => INV
+    [invoice_number] => 201
+)
+ */
