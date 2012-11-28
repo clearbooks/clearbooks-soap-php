@@ -31,4 +31,4 @@ Clearbooks_Soap_1_0_InvoiceReturn Object
     [invoice_prefix] => INV
     [invoice_number] => 201
 )
- */
+*/

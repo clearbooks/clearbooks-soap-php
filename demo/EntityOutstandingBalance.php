@@ -9,4 +9,4 @@ Clearbooks_Soap_1_0_EntityOutstandingBalance Object
     [outstanding] => 6578.67
     [overdue] => 6548.68
 )
- */
+*/
