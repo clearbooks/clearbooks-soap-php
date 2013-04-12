@@ -66,5 +66,20 @@ class Clearbooks_Soap_1_0_Invoice
 
     /** @var int */
     public $multicurrency = '';
+
+    /** @var float */
+    public $gross = 0;
+
+    /** @var float */
+    public $net = 0;
+
+    /** @var float */
+    public $vat = 0;
+
+    /** @var float */
+    public $paid = 0;
+
+    /** @var float */
+    public $balance = 0;
 }
 //EOF Invoice.php
