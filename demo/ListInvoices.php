@@ -32,7 +32,7 @@ Array
             [description] => API Test Invoice
             [entityId] => 16
             [invoice_id] => 209
-            [invoice_prefix] => VINV
+            [invoice_prefix] => INV
             [invoiceNumber] => 204
             [reference] =>
             [dateCreated] => 2012-10-19 00:00:00
@@ -42,12 +42,17 @@ Array
             [bankPaymentId] => 0
             [project] => 0
             [external_id] =>
-            [status] => voided
+            [status] => approved
             [statementPage] => https://secure.clearbooks.co.uk/accounting/sales/invoice_html/?source=statement&type=invoice&c=2&auth=-lHLOCMD8mOPS5qyEjiw2g
             [themeId] => 0
             [type] => S
             [vatTreatment] =>
             [multicurrency] => 0
+            [gross] => 29.99
+            [net] => 24.99
+            [vat] => 5
+            [paid] => 0
+            [balance] => 29.99
         )
 
 )
