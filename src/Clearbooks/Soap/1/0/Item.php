@@ -4,6 +4,7 @@
  * @version 1.0
  * @package Clearbooks
  * @subpackage Soap/1/0
+ * @minOccurs 1
  */
 class Clearbooks_Soap_1_0_Item
 {
@@ -16,7 +17,7 @@ class Clearbooks_Soap_1_0_Item
     /** @var float */
     public $vat = '';
 
-    /** @var int */
+    /** @var float */
     public $quantity = 1;
 
     /** @var int */
