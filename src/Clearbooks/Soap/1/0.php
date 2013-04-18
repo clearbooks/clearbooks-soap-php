@@ -197,6 +197,15 @@ class Clearbooks_Soap_1_0 extends \SoapClient
     }
 
     /**
+     * @param \Clearbooks_Soap_1_0_ExchangeRateRequest $request
+     * @return float
+     */
+    public function getExchangeRate( $request )
+    {
+        return $this->_call( 'getExchangeRate', $request );
+    }
+
+    /**
      * @param string $type
      * @param string $invoicePrefix
      * @param string $invoiceNumber
