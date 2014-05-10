@@ -1,5 +1,7 @@
 <?php
-require_once __DIR__ . '/includes.php';
+require "../vendor/autoload.php";
+
+$client = new \ClearBooks\Client( 'demo' );
 
 // the paypal bank account
 $paypalBankAccount = 7502004;
@@ -14,7 +16,7 @@ $received = 1150;
 $salesInvoiceId = 189;
 
 // fetch the original invoice
-$invoiceQuery = new \Clearbooks_Soap_1_0_InvoiceQuery();
+$invoiceQuery = new \ClearBooks\InvoiceQuery();
 $invoiceQuery->id[]   = $salesInvoiceId;
 $invoiceQuery->ledger = 'sales';
 $invoiceQuery->status = 'approved';
@@ -35,7 +37,7 @@ array_walk( $invoice->items, function( $item ) use ( &$total ) {
 $fee = $received - $total;
 
 // create an invoice for the paypal fee
-$invoice = new \Clearbooks_Soap_1_0_Invoice();
+$invoice = new \ClearBooks\Invoice();
 $invoice->creditTerms = 0;
 $invoice->dateCreated = date( 'Y-m-d' );
 $invoice->dateDue     = date( 'Y-m-d' );
@@ -45,7 +47,7 @@ $invoice->status      = 'approved';
 $invoice->type        = 'sales';
 
 // add the fee item to the invoice (should be a negative amount)
-$item = new \Clearbooks_Soap_1_0_Item();
+$item = new \Clearbooks\Item();
 $item->description = 'PayPal Fee';
 $item->quantity    = 1;
 $item->type        = 6001002;
@@ -58,7 +60,7 @@ $invoiceReturn = $client->createInvoice( $invoice );
 $feeInvoiceId  = $invoiceReturn->invoice_id;
 
 // create the payment
-$payment = new \Clearbooks_Soap_1_0_Payment();
+$payment = new \ClearBooks\Payment();
 $payment->amount         = $received;
 $payment->accountingDate = date( 'Y-m-d' );
 $payment->bankAccount    = $paypalBankAccount;

@@ -1,8 +1,10 @@
 <?php
-require_once __DIR__ . '/includes.php';
+require "../vendor/autoload.php";
+
+$client = new \ClearBooks\Client( 'demo' );
 
 // construct a query to filter returned invoices
-$invoiceQuery = new \Clearbooks_Soap_1_0_InvoiceQuery();
+$invoiceQuery = new \ClearBooks\InvoiceQuery();
 // find invoices that were created or had a payment applied within the last week
 $invoiceQuery->modifiedSince = date( 'Y-m-d', strtotime( '-1 week' ) );
 // look in the sales ledger

@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/includes.php';
+require "../vendor/autoload.php";
 
 // create the payment
-$payment = new \Clearbooks_Soap_1_0_Payment();
+$payment = new \ClearBooks\Payment();
 $payment->amount         = 29.99;
 $payment->accountingDate = date( 'Y-m-d' );
 $payment->bankAccount    = 7502001;
@@ -12,6 +12,7 @@ $payment->invoices       = 212;
 $payment->paymentMethod  = 1;
 $payment->type           = 'sales';
 
+$client = new \ClearBooks\Client( 'demo' );
 $paymentReturn = $client->createPayment( $payment );
 print_r( $paymentReturn );
 
