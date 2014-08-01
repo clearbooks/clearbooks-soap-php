@@ -10,6 +10,8 @@ $invoice->description = 'API Test Invoice';
 $invoice->entityId    = 16;
 $invoice->status      = 'approved';
 $invoice->type        = 'sales';
+// $invoice->multicurrency = 2; // Optionally create my invoice in Euros
+// $invoice->fxrate = 2.00; // Optionally force the exchange rate for the invoice.
 
 // add an item to the invoice
 $item = new \Clearbooks_Soap_1_0_Item();
