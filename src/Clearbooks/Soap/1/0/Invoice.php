@@ -61,7 +61,16 @@ class Clearbooks_Soap_1_0_Invoice
     /** @var string */
     public $type;
 
-    /** @var string */
+    /**
+     * @var string
+     * 'OUT'  => 'Out of Scope - Not on VAT Return',
+     * 'UK'   => 'Goods or Services ref UK Entity',
+     * 'GEU'  => 'Goods ref EU Entity',
+     * 'SEU'  => 'Services ref EU Entity',
+     * 'GOEU' => 'Goods ref Entity Outside EU',
+     * 'SOEU' => 'Services ref Entity Outside EU',
+     * 'DSEU' => 'Digital Services ref EU Entity',
+     */
     public $vatTreatment = '';
 
     /** @var int */
