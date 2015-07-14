@@ -35,10 +35,10 @@ print_r( $invoiceReturn );
 )
  */
 
-$invoiceRef = new Clearbooks_Soap_1_0_InvoiceRef();
-$invoiceRef->id = $invoiceReturn->invoice_id;
-$invoiceRef->type = 'sales';
-$voidResult = $client->voidInvoice( $invoiceRef );
+$voidRequest = new Clearbooks_Soap_1_0_InvoiceRef();
+$voidRequest->id = $invoiceReturn->invoice_id;
+$voidRequest->type = 'sales';
+$voidResult = $client->voidInvoice( $voidRequest );
 
 print_r( $voidResult );
 
