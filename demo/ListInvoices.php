@@ -1,10 +1,12 @@
 <?php
-require_once __DIR__ . '/includes.php';
+require "../vendor/autoload.php";
 
 // construct a query to filter returned invoices
-$invoiceQuery = new \Clearbooks_Soap_1_0_InvoiceQuery();
+$invoiceQuery = new \ClearBooks\InvoiceQuery();
 $invoiceQuery->id[]   = 209;
 $invoiceQuery->ledger = 'sales';
+
+$client = new \ClearBooks\Client( 'demo' );
 
 // execute the command
 $invoices = $client->listInvoices( $invoiceQuery );

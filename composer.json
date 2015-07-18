@@ -1,0 +1,17 @@
+{
+    "name": "antz29/clearbooks-soap-php",
+    "authors": [
+        {
+            "name": "John Le Drew",
+            "email": "jp@antz29.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "ClearBooks\\": "src/"
+        }
+    }
+}

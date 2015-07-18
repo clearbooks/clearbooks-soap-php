@@ -1,5 +1,8 @@
 <?php
-require_once __DIR__ . '/includes.php';
+require "../vendor/autoload.php";
+
+$client = new \ClearBooks\Client( 'demo' );
+
 $entityOutstandingBalance = $client->getEntityOutstandingBalance( 16, 'sales' );
 print_r( $entityOutstandingBalance );
 

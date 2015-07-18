@@ -1,10 +1,12 @@
 <?php
-require_once __DIR__ . '/includes.php';
+require "../vendor/autoload.php";
 
 // construct a query to filter returned invoices
-$entityQuery = new \Clearbooks_Soap_1_0_EntityQuery();
+$entityQuery = new \ClearBooks\EntityQuery();
 $entityQuery->id[] = 8;
 $entityQuery->type = 'supplier';
+
+$client = new \ClearBooks\Client( 'demo' );
 
 // execute the command
 $entities = $client->listEntities( $entityQuery );

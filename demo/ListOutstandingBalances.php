@@ -1,7 +1,11 @@
 <?php
-require_once __DIR__ . '/includes.php';
+require "../vendor/autoload.php";
+
+$client = new \ClearBooks\Client( 'demo' );
+
 $outstandingBalances = $client->listOutstandingBalances( 'sales' );
-print_r( $outstandingBalances );
+
+var_dump( $outstandingBalances );
 
 /*
 Array
