@@ -8,10 +8,10 @@
 class Clearbooks_Soap_1_0_Entity
 {
     /** @var \Clearbooks_Soap_1_0_EntityExtra */
-    public $supplier;
+    public $supplier = null;
 
     /** @var \Clearbooks_Soap_1_0_EntityExtra */
-    public $customer;
+    public $customer = null;
 
     /** @var \Clearbooks_Soap_1_0_BankAccount */
     public $bankAccount = null;
