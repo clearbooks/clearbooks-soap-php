@@ -1,6 +1,6 @@
 {
   "name": "clearbooks/clearbooks-soap-php",
   "autoload": {
-    "psr-4": { "" : "src/" }
+    "classmap": [ "src/" ]
   }
 }
