@@ -1,3 +1,6 @@
 {
-  "name": "clearbooks/clearbooks-soap-php"
+  "name": "clearbooks/clearbooks-soap-php",
+  "autoload": {
+    "psr-4": { "" : "src/" }
+  }
 }

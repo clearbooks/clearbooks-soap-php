@@ -35,6 +35,9 @@ class Clearbooks_Soap_1_0_Invoice
     public $dateDue = '';
 
     /** @var \DateTime */
+    public $dateModified = '';
+
+    /** @var \DateTime */
     public $dateAccrual = '';
 
     /** @var int */
@@ -75,6 +78,9 @@ class Clearbooks_Soap_1_0_Invoice
 
     /** @var int */
     public $multicurrency = '';
+
+    /** @var float */
+    public $fxrate = 0;
 
     /** @var float */
     public $gross = 0;
