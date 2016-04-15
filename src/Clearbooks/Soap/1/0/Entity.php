@@ -13,7 +13,7 @@ class Clearbooks_Soap_1_0_Entity
     /** @var \Clearbooks_Soap_1_0_EntityExtra */
     public $customer;
 
-    /** @var \Clearbooks_Soap_1_0_BankAccount|null */
+    /** @var \Clearbooks_Soap_1_0_BankAccount */
     public $bankAccount = null;
 
     /** @var int */
