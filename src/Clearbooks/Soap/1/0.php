@@ -97,6 +97,24 @@ class Clearbooks_Soap_1_0 extends \SoapClient
     }
 
     /**
+     * @param string $bankAccount
+     * @param string $statementName
+     * @param \Clearbooks_Soap_1_0_BankStatementLine[] $statementLines
+     */
+    public function addBankStatementLines( $bankAccount, $statementName, $statementLines )
+    {
+        $this->_call( 'addBankStatementLines', $bankAccount, $statementName, $statementLines );
+    }
+
+    /**
+     * @param \Clearbooks_Soap_1_0_CreditPartialQuery $query
+     */
+    public function writeOffPartial( $query )
+    {
+        $this->_call( 'writeOffPartial', $query );
+    }
+
+    /**
      * @param \Clearbooks_Soap_1_0_Entity $entity
      * @return int
      */

@@ -25,5 +25,8 @@ class Clearbooks_Soap_1_0_Item
 
     /** @var string */
     public $vatRate = '0';
+
+    /** @var int */
+    public $project = 0;
 }
 //EOF Item.php
