@@ -38,6 +38,6 @@ class Clearbooks_Soap_1_0_Payment
     public $bsAccount = 0;
 
     /** @var int */
-    public $fxrate;
+    public $fxrate = 0;
 }
 //EOF Payment.php
