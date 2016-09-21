@@ -7,10 +7,16 @@
  */
 class Clearbooks_Soap_1_0_Entity
 {
-    /** @var \Clearbooks_Soap_1_0_EntityExtra */
+    /**
+     * @var \Clearbooks_Soap_1_0_EntityExtra
+     * @optional
+     */
     public $supplier = null;
 
-    /** @var \Clearbooks_Soap_1_0_EntityExtra */
+    /**
+     * @var \Clearbooks_Soap_1_0_EntityExtra
+     * @optional
+     */
     public $customer = null;
 
     /** @var \Clearbooks_Soap_1_0_BankAccount */
