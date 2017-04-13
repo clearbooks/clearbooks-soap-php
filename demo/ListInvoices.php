@@ -53,6 +53,7 @@ Array
             [vat] => 5
             [paid] => 0
             [balance] => 29.99
+            [foreignCurrencyBalance] => 0
         )
 
 )
