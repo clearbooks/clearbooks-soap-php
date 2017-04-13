@@ -5,7 +5,7 @@
  * @package Clearbooks
  * @subpackage Soap/1/0
  */
-class Clearbooks_Soap_1_0_Invoice
+class Clearbooks_Soap_1_0_CreateInvoice
 {
     /** @var \Clearbooks_Soap_1_0_Item[] */
     public $items = array();
@@ -96,8 +96,5 @@ class Clearbooks_Soap_1_0_Invoice
 
     /** @var float */
     public $balance = 0;
-
-    /** @var float */
-    public $foreignCurrencyBalance = 0;
 }
 //EOF Invoice.php
