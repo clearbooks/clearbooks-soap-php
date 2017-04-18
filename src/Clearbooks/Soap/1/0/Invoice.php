@@ -20,7 +20,7 @@ class Clearbooks_Soap_1_0_Invoice
     public $invoice_id = 0;
 
     /** @var string */
-    public $invoice_prefix = '';
+    public $invoicePrefix = '';
 
     /** @var int */
     public $invoiceNumber = 0;
