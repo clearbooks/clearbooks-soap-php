@@ -96,5 +96,8 @@ class Clearbooks_Soap_1_0_Invoice
 
     /** @var float */
     public $balance = 0;
+
+    /** @var float */
+    public $foreignCurrencyBalance = 0;
 }
 //EOF Invoice.php
