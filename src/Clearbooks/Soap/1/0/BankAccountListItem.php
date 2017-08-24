@@ -26,7 +26,7 @@ class Clearbooks_Soap_1_0_BankAccountListItem
     public $id;
 
     /** @var \DateTime */
-    public $last_date;
+    public $last_date = '';
 
     /** @var float */
     public $total_mc = '';
