@@ -34,7 +34,10 @@ class Clearbooks_Soap_1_0_Invoice
     /** @var \DateTime */
     public $dateDue = '';
 
-    /** @var \DateTime */
+    /**
+     * @deprecated
+     * @var \DateTime
+     */
     public $dateModified = '';
 
     /** @var \DateTime */
