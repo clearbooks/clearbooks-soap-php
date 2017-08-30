@@ -22,7 +22,10 @@ class Clearbooks_Soap_1_0_InvoiceQuery
     /** @var int */
     public $offset = 0;
 
-    /** @var \DateTime */
+    /**
+     * @deprecated
+     * @var \DateTime
+     */
     public $modifiedSince = '';
 }
 //EOF InvoiceQuery.php
