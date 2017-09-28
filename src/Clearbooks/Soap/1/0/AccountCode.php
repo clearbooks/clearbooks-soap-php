@@ -27,5 +27,8 @@ class Clearbooks_Soap_1_0_AccountCode
 
     /** @var string */
     public $customAccountCode;
+
+    /** @var bool */
+    public $hidden;
 }
 //EOF AccountCode.php
