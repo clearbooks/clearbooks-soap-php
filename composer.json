@@ -1,6 +1,23 @@
 {
   "name": "clearbooks/clearbooks-soap-php",
+  "description": "The PHP SDK for the Clear Books SOAP API",
+  "keywords": ["Clear Books", "Accounting", "Invoices"],
+
+  "license": "MIT",
+
+  "authors": [
+    {
+      "name": "Clear Books plc",
+      "email": "help@clearbooks.co.uk",
+      "homepage": "https://www.clearbooks.co.uk/"
+    }
+  ],
+
   "autoload": {
     "classmap": [ "src/" ]
+  },
+
+  "require": {
+    "ext-soap": "*"
   }
 }
