@@ -39,6 +39,7 @@
  * @method \Clearbooks_Soap_1_0_ResponseStatus voidPayment( \Clearbooks_Soap_1_0_RemovePayment $payment )
  * @method \Clearbooks_Soap_1_0_CreditResponseStatus writeOff( \Clearbooks_Soap_1_0_CreditQuery $query )
  * @method int createBankAccount( \Clearbooks_Soap_1_0_Bank_BankAccount $bankAccount )
+ * @method \Clearbooks_Soap_1_0_PaymentMethod[] listPaymentMethods()
  */
 class Clearbooks_Soap_1_0 extends \SoapClient
 {
