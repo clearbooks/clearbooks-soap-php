@@ -19,8 +19,11 @@ class Clearbooks_Soap_1_0_Entity
      */
     public $customer = null;
 
-    /** @var \Clearbooks_Soap_1_0_BankAccount */
-    public $bankAccount = '';
+    /**
+     * @var \Clearbooks_Soap_1_0_BankAccount
+     * @optional
+     */
+    public $bankAccount = null;
 
     /** @var int */
     public $id = 0;
