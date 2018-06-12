@@ -61,6 +61,9 @@ class Clearbooks_Soap_1_0_Invoice
     /** @var string */
     public $statementPage = '';
 
+    /** @var string */
+    public $pdfUrl = '';
+
     /** @var int */
     public $themeId = 1;
 
