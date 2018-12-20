@@ -24,7 +24,7 @@ class Clearbooks_Soap_1_0_InvoiceQuery
 
     /**
      * @deprecated
-     * @var \DateTime
+     * @var string
      */
     public $modifiedSince = '';
 }
